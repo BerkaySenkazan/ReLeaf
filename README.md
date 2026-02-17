@@ -34,7 +34,7 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/BerkaySenkazan/ReLeaf-DES.git
+   git clone https://github.com/BerkaySenkazan/ReLeaf.git
    cd ReLeaf
    ```
 
