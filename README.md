@@ -34,8 +34,8 @@
 
 1. **Clone the repository**
    ```bash
-   git clone https://github.com/your-username/releaf-des.git
-   cd releaf-des
+   git clone https://github.com/BerkaySenkazan/ReLeaf-DES.git
+   cd ReLeaf
    ```
 
 2. **Install dependencies**
