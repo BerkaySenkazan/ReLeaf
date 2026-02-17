@@ -1,73 +1,73 @@
-# React + TypeScript + Vite
+# ReLeaf DES Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**ReLeaf DES** is a next-generation industrial waste exchange platform designed to securely connect waste sellers with buyers. It leverages a neural matching engine to optimize resource allocation and features a unique DES (Data Encryption Standard) visualization interface.
 
-Currently, two official plugins are available:
+![ReLeaf DES Dashboard](./public/screenshot-placeholder.png)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🚀 Key Features
 
-## React Compiler
+### 🧠 Neural Match Engine
+- **Real-time Matching**: Automatically pairs waste sellers with potential buyers based on waste type, quantity, and capacity constraints.
+- **Partial Allocation**: Smartly splits large seller quantities across multiple buyers to maximize matches.
+- **Unallocated Pool**: Tracks remaining waste quantities for future matching.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### 🔐 DES Encryption Visualization
+- **Interactive Security**: Visualizes the encryption process upon data submission.
+- **Status Indicators**: Real-time feedback on encryption states (Encrypting, Secured, Standby).
+- **Animation**: Custom CSS animations simulating DES-56 block cipher operations.
 
-## Expanding the ESLint configuration
+### 🎨 Premium UI/UX
+- **Cyberpunk / Sci-Fi Aesthetic**: A dark-themed, immersive interface with emerald and cyan accents.
+- **Glassmorphism**: Usage of backdrop filters and semi-transparent layers for depth.
+- **Responsive Design**: Optimized layouts for Desktop (3-column), Tablet (2-column), and Mobile (stacked).
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Technology Stack
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- **Frontend**: [React 19](https://react.dev/) + [TypeScript](https://www.typescriptlang.org/) + [Vite](https://vitejs.dev/)
+- **Styling**: **Vanilla CSS** (No frameworks). A complete custom design system using CSS Variables for theming and layout.
+- **State Management**: [Zustand](https://github.com/pmndrs/zustand) for global state (waste data, matching logic).
+- **Animation**: [Framer Motion](https://www.framer.com/motion/) for complex UI transitions.
+- **Icons**: [Lucide React](https://lucide.dev/) for consistent iconography.
+- **Charts**: [Recharts](https://recharts.org/) for analytics visualization.
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## 📦 Installation
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/releaf-des.git
+   cd releaf-des
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. **Build for production**
+   ```bash
+   npm run build
+   ```
+
+## 📂 Project Structure
+
+```
+src/
+├── components/      # React components (Header, Forms, MatchFeed, etc.)
+├── store/           # Zustand store definitions
+├── index.css        # Global Vanilla CSS Design System
+├── App.tsx          # Main application layout
+└── main.tsx         # Entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🤝 Contributing
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+## 📄 License
+
+This project is licensed under the MIT License.
